@@ -4,7 +4,7 @@
   "description": "a discord bot!",
   "main": "index.js",
   "scripts": {
-   "start": "node keep_alive.js & node index.js"
+    "start": "node keep_alive.js & node index.js",  // Đã xóa comment
     "lint": "npx eslint .",
     "lint:fix": "npx eslint --fix .",
     "prettier": "npx prettier --check .",
