@@ -1,0 +1,34 @@
+/*
+ * UWU BOT (By Sám Phùng)
+ * Dựa trên OwO Bot, tuỳ chỉnh và tái phát triển bởi Sám Phùng
+ * Phiên bản sử dụng riêng tư – không chia sẻ lại
+ */
+
+
+/* Checks the current ram every hour.
+ * It resets the all shards if we have less than 0.75GB of ram left
+ */
+const si = require('systeminformation');
+// const global = require('./global.js');
+/* Interval to check (0.5H) */
+const interval = 3600000 / 2;
+/* Minimum ram (1.5GB) */
+const resetbyte = 2.5 * 1024 * 1024 * 1024;
+
+class RamCheck {
+	constructor() {
+		setInterval(this.check, interval);
+	}
+
+	async check() {
+		let mem = await si.mem();
+		let ram = mem.available - mem.swaptotal;
+		console.log('CURRENT RAM: ' + ram / (1024 * 1024 * 1024) + 'G');
+		if (ram <= resetbyte) {
+			console.log('NOT ENOUGH RAM. RESETTING SHARDS');
+			//global.resetBot();
+		}
+	}
+}
+
+module.exports = RamCheck;
