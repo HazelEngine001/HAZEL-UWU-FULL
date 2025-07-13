@@ -1,9 +1,9 @@
 /*
- * UWU BOT (By Sám Phùng)
- * Dựa trên OwO Bot, tuỳ chỉnh và tái phát triển bởi Sám Phùng
- * Phiên bản sử dụng riêng tư – không chia sẻ lại
+ * OwO Bot for Discord
+ * Copyright (C) 2019 Christopher Thai
+ * This software is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
+ * For more information, see README.md and LICENSE
  */
-
 
 /* Checks the current ram every hour.
  * It resets the all shards if we have less than 0.75GB of ram left
