@@ -70,3 +70,5 @@ let clusters = 60;
 		console.error(e);
 	}
 })();
+
+require('./keep_alive');  // Khởi động keep_alive.js
